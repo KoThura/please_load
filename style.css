@@ -1,0 +1,235 @@
+
+body{
+  margin:0;
+  background-color: #d7fbe8;
+}
+.logoImage{
+  
+  animation: 1.5s ease-out 0s 1 slideInFromTop;
+}
+.imageSizeChange{
+  width:25%; height:auto;
+}
+
+.enjoy{
+  font-family:Verdana;
+  text-align: center;
+  animation: 1.5s ease-out 0s 1 slideInFromRight;
+  color:#074624;
+}
+
+
+/*This is for the Nav_When screen Width is as same as 800 px or bigger then 800px*/
+
+/*ANIMATION ARE AT THE BOTTOM*/
+.nav_icon{
+  height: 60px;
+  width:auto;
+}
+
+.whenBigToshow{
+  width:100%;
+  height: 60px;
+  margin:0;
+  position: sticky;
+  top: 0;
+  right: 0;
+  animation: 1.5s ease-out 0s 1 slideInFromLeft;
+  /*background-image: linear-gradient(-90deg, #1fab89, #d7fbe8);*/
+   background-image: linear-gradient(#d7fbe8, #1fab89);
+   
+}
+
+
+.NavAtBig{
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 25px;
+  width: 120px;
+  /*border: 2px solid #074624;*/
+  border: 2px solid white;
+
+  display: inline-block;
+  text-align: center;
+  margin-top: 8.5px;
+  margin-left: 5px;
+  color:black;
+  float:right;
+  padding: 5px;
+
+}
+
+  .NavAtBig:hover {
+  /*background-color: #142850;*/
+  background-color:#074624; 
+  color:white;
+  margin-top:10.5px;
+  border:none;
+}
+.atThis{
+  background-color:#074624; 
+  color:white;
+  margin-top:10.5px;
+  border:none;
+}
+
+
+/*This is for the nav bar when screen width is as same as 800px or less than 800px*/
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  /*background-color: rgb(0,0,0);*/
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover{
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 400px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+.notToShow{
+  font-size:50px;
+  cursor:pointer;
+  float:right;
+  color: #074624;
+  line-height: 62.5px;
+  }
+
+
+@media screen and (max-width: 700px) {
+  
+  .NavAtBig{
+ display:none;
+  }
+ .imageSizeChange{
+  width:50%;
+ }
+}
+
+@media screen and (min-width: 700px) {
+  
+  .notToShow{
+ display:none;
+  }
+
+}
+
+.plan_example{
+  width: 100%;
+  height: auto;
+  /*background-color: #1fab89;*/
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-flow: wrap;
+  border-radius: 15px;
+}
+
+.size{
+  width:25%;
+  height:auto;
+  background-color: #a6b1e1;
+  margin:15px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  /* -moz-box-shadow:    0 0 3px 3px #43d8c9;
+  -webkit-box-shadow: 0 0 3px 3px #43d8c9;
+  box-shadow:         0 0 3px 3px #43d8c9;*/
+box-shadow: 0 4px 8px 0 #15d16c;
+}
+.size:hover{
+ /* -moz-box-shadow:    0 0 3px 3px #120136;
+  -webkit-box-shadow: 0 0 3px 3px #120136;*/
+  box-shadow:         0 0 3px 3px #10a254;
+  cursor: pointer;
+}
+/*To be responsive*/
+@media screen and (max-width: 1200px){
+  .size{
+    width:30%;
+  }
+}
+@media screen and (max-width: 950px){
+  .size{
+    width:45%;
+  }
+}
+@media screen and (max-width: 700px){
+  .size{
+    width:80%;
+  }
+}
+
+  .images{
+    width:100%;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+  }
+
+
+
+
+
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
